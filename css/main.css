@@ -159,3 +159,59 @@ a {
     height: 953px;
     background-image: url(../images/galaxyBG.jpg);
 }
+
+/* solarsystem */
+
+#sun {
+	grid-column: 2/4;
+	margin-top: 270px;
+	margin-left: 35px;
+}
+
+#mercury {
+	margin-top: 200px;
+	grid-column: 4/4;
+}
+
+#venus {
+	margin-top: 450px;
+	margin-left: 15px;
+	grid-column: 5/5;
+}
+
+#earth {
+	margin-top: 300px;
+	grid-column: 6/6;
+}
+
+#mars {
+	margin-top: 530px;
+	grid-column: 7/7;
+}
+
+#jupiter {
+	margin-left: -50px;
+	margin-top: 100px;
+	grid-column: 8/8;
+}
+
+#saturn {
+	margin-left: -80px;
+	margin-top: 300px;
+	grid-column: 9/9;
+}
+
+#uranus {
+	margin-top: 490px;
+	grid-column: 10/10;
+}
+
+#neptune {
+	margin-top: 300px;
+	grid-column: 11/11;
+}
+
+#pluto {
+	margin-top: 600px;
+	grid-column: 12/12;
+}
