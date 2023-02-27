@@ -1,0 +1,12 @@
+<svg id="mercury" xmlns="http://www.w3.org/2000/svg" width="118.786" height="118.795" viewBox="0 0 118.786 118.795">
+  <g id="Group_1" data-name="Group 1" transform="translate(0 0)">
+    <path id="Path_1" data-name="Path 1" d="M82.972,5.08a56.279,56.279,0,0,1-76,81.412A59.4,59.4,0,1,0,82.963,5.08Z" transform="translate(-0.685 -0.5)" fill="#c39c50"/>
+    <path id="Path_2" data-name="Path 2" d="M94.621,39.718A56.026,56.026,0,0,0,82.286,4.58a59.4,59.4,0,0,0-76,81.4A56.285,56.285,0,0,0,94.621,39.709Z" transform="translate(0 0)" fill="#ddcf8d"/>
+  </g>
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.367" cy="8.367" r="8.367" transform="translate(43.74 12.046)" fill="#c39c50"/>
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="8.106" cy="8.106" r="8.106" transform="translate(47.311 61.683)" fill="#c39c50"/>
+  <circle id="Ellipse_3" data-name="Ellipse 3" cx="7.294" cy="7.294" r="7.294" transform="translate(10.279 51.945)" fill="#c39c50"/>
+  <circle id="Ellipse_4" data-name="Ellipse 4" cx="4.373" cy="4.373" r="4.373" transform="translate(28.7 26.166)" fill="#c39c50"/>
+  <circle id="Ellipse_5" data-name="Ellipse 5" cx="3.949" cy="3.949" r="3.949" transform="translate(37.446 55.949)" fill="#c39c50"/>
+  <circle id="Ellipse_6" data-name="Ellipse 6" cx="3.507" cy="3.507" r="3.507" transform="translate(67.688 30.549)" fill="#c39c50"/>
+</svg>
