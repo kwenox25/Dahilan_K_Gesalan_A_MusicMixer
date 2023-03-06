@@ -217,6 +217,7 @@ a {
 }
 
 .puzzle-board { 
+	border-radius: 50px;
 	margin: 0 auto;
 	width: 1000px;
 	height: 150px; 
