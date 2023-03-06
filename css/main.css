@@ -215,3 +215,13 @@ a {
 	margin-top: 600px;
 	grid-column: 12/12;
 }
+
+.puzzle-board { 
+	margin: 0 auto;
+	width: 1000px;
+	height: 150px; 
+	background-repeat: no-repeat;
+	border-width: 5px;
+	border-style: solid;
+	border-color: white;
+}
