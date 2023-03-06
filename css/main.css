@@ -219,11 +219,13 @@ a {
 .puzzle-board { 
 	border-radius: 50px;
 	margin: 0 auto;
-	width: 1000px;
-	height: 150px; 
+	width: 958px;
+	height: 194px; 
 	background-repeat: no-repeat;
 	border-width: 5px;
 	border-style: solid;
-	border-color: yellow;
+	border-color: white;
 	background-color: #000;
-}
+}  
+
+
