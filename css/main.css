@@ -216,34 +216,10 @@ a {
 	grid-column: 12/12;
 }
 
-/* .puzzle-board { 
-	border-radius: 50px;
-	margin: 0 auto;
-	width: 1000px;
-	height: 150px; 
-	background-repeat: no-repeat;
-	border-width: 5px;
-	border-style: solid;
-	border-color: yellow;
-	background-color: #000;
-	border: thin dashed white;
-	display: grid;
-	grid-auto-rows: 200px;
-} */
-
 
 .solarSystem-image {
 	cursor: pointer;
 }
-
-/* .puzzle-board {
-    width: 1000px;
-    margin: 0 auto;
-    background-color: #efefef;
-    display: flex;
-    grid-template-rows: 20%;
-    /* any rows that are implicit, should be 400px 
-} */
 
 .solar-board {
 	margin-top: 60px;
