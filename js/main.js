@@ -1,38 +1,44 @@
-let puzzleBoard = document.querySelector(".puzzle-board"),
-    solarPieces = document.querySelectorAll("#solarSystem img"),
-    dropZones = document.querySelectorAll('.drop-zone'),
-    mainBoard = document.querySelector('#solarSystem'),
-    draggedPiece = null;
+const solarSystemImages = document.querySelectorAll('.solarSystem-image');
+const dropZones = document.querySelectorAll('.drop-zone');
 
+// Add event listeners for drag and drop
+solarSystemImages.forEach(image => {
+  image.addEventListener('dragstart', dragStart);
+  image.addEventListener('dragend', dragEnd);
+});
 
+dropZones.forEach(zone => {
+  zone.addEventListener('dragover', dragOver);
+  zone.addEventListener('dragenter', dragEnter);
+  zone.addEventListener('dragleave', dragLeave);
+  zone.addEventListener('drop', drop);
+});
 
-function handleStartDrag() {
-	console.log('Started dragging this piece:', this);
-	draggedPiece = this;
+// Drag functions
+function dragStart() {
+  this.classList.add('dragging');
 }
 
-function handleDragOver(event) {
-	event.preventDefault();
-	// Fix Bug 2
-	if (this.children.length === 0) {
-		this.appendChild(draggedPiece);
-		console.log('dragged over me');
-	}
+function dragEnd() {
+  this.classList.remove('dragging');
 }
 
-function handleDrop(e) {
-	e.preventDefault();
-	
-	console.log('dropped something on me');
+// Drop zone functions
+function dragOver(e) {
+  e.preventDefault();
 }
 
+function dragEnter(e) {
+  e.preventDefault();
+  this.classList.add('hovered');
+}
 
+function dragLeave() {
+  this.classList.remove('hovered');
+}
 
-    //ad drag and drop event handling to the puzzle pieces
-solarPieces.forEach(piece => piece.addEventListener('dragstart', handleStartDrag));
-    
-    // add the dragover AND the drop event handling to the drop zones
-dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
-    
-    // add the drop event handling
-dropZones.forEach(zone => zone.addEventListener("dragover", handleDrop));
+function drop() {
+  this.classList.remove('hovered');
+  const draggedImage = document.querySelector('.dragging');
+  this.appendChild(draggedImage);
+}

@@ -216,7 +216,7 @@ a {
 	grid-column: 12/12;
 }
 
-.puzzle-board { 
+/* .puzzle-board { 
 	border-radius: 50px;
 	margin: 0 auto;
 	width: 1000px;
@@ -224,16 +224,12 @@ a {
 	background-repeat: no-repeat;
 	border-width: 5px;
 	border-style: solid;
-<<<<<<< Updated upstream
-	border-color: white;
-}
-=======
 	border-color: yellow;
 	background-color: #000;
 	border: thin dashed white;
 	display: grid;
 	grid-auto-rows: 200px;
-}
+} */
 
 
 .solarSystem-image {
@@ -250,11 +246,13 @@ a {
 } */
 
 .solar-board {
+	margin-top: 60px;
 	width: 1016px;
 	height: 150px;
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
+	background-color: black;
 	
 }
 
@@ -268,5 +266,5 @@ a {
 .drop-zone img {
 	position: absolute;
 	width: 100%;
+
 }
->>>>>>> Stashed changes
