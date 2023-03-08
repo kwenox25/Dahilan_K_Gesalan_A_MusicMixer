@@ -160,7 +160,7 @@ a {
     background-image: url(../images/galaxyBG.jpg);
 }
 
-/* solarsystem */
+/* solarSystem */
 
 #sun {
 	grid-column: 2/4;
@@ -222,6 +222,7 @@ a {
 }
 
 .solar-board {
+	
 	margin-top: 60px;
 	width: 1016px;
 	height: 150px;
@@ -233,9 +234,10 @@ a {
 }
 
 .drop-zone {
+	
 	border: thin dashed white;
 	width: 200px;	
-	/* background-color: #ccc; */
+	border-color: #f1c761;
 	/* margin: 10px; */
 }
 

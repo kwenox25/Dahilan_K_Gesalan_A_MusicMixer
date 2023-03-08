@@ -1,44 +1,30 @@
-const solarSystemImages = document.querySelectorAll('.solarSystem-image');
-const dropZones = document.querySelectorAll('.drop-zone');
+let puzzleBoard = document.querySelector(".solar-board"),
+	puzzlePieces = document.querySelectorAll(".solarSystem img"),
+	dropZones = document.querySelectorAll(".drop-zone"),
+	mainBoard = document.querySelector(".solarSystem"),
+    draggedPiece = null;
 
-// Add event listeners for drag and drop
-solarSystemImages.forEach(image => {
-  image.addEventListener('dragstart', dragStart);
-  image.addEventListener('dragend', dragEnd);
-});
 
-dropZones.forEach(zone => {
-  zone.addEventListener('dragover', dragOver);
-  zone.addEventListener('dragenter', dragEnter);
-  zone.addEventListener('dragleave', dragLeave);
-  zone.addEventListener('drop', drop);
-});
-
-// Drag functions
-function dragStart() {
-  this.classList.add('dragging');
+function handleStartDrag() {
+	console.log('Started dragging this piece:', this);
+	draggedPiece = this;
 }
 
-function dragEnd() {
-  this.classList.remove('dragging');
+function handleDragOver(event) {
+	event.preventDefault();
+	// Fix Bug 2
+	if (this.children.length === 0) {
+		this.appendChild(draggedPiece);
+		console.log('dragged over me');
+	}
 }
 
-// Drop zone functions
-function dragOver(e) {
-  e.preventDefault();
+function handleDrop(e) {
+	e.preventDefault();
+	
+	console.log('dropped something on me');
 }
+puzzlePieces.forEach(piece => piece.addEventListener('dragstart', handleStartDrag));
+dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
+dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 
-function dragEnter(e) {
-  e.preventDefault();
-  this.classList.add('hovered');
-}
-
-function dragLeave() {
-  this.classList.remove('hovered');
-}
-
-function drop() {
-  this.classList.remove('hovered');
-  const draggedImage = document.querySelector('.dragging');
-  this.appendChild(draggedImage);
-}
