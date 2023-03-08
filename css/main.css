@@ -216,11 +216,31 @@ a {
 	grid-column: 12/12;
 }
 
-.puzzle-board { 
-	border-radius: 50px;
+
+.solarSystem-image {
+	cursor: pointer;
+}
+
+.solar-board {
+	margin-top: 60px;
+	width: 1016px;
+	height: 150px;
 	margin: 0 auto;
-	width: 1000px;
-	height: 150px; 
-	background-repeat: no-repeat;
-	border-width: 5px;
-	border-style: solid;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: black;
+	
+}
+
+.drop-zone {
+	border: thin dashed white;
+	width: 200px;	
+	/* background-color: #ccc; */
+	/* margin: 10px; */
+}
+
+.drop-zone img {
+	position: absolute;
+	width: 100%;
+
+}
