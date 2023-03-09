@@ -160,7 +160,7 @@ a {
     background-image: url(../images/galaxyBG.jpg);
 }
 
-/* solarsystem */
+/* solarSystem */
 
 #sun {
 	grid-column: 2/4;
@@ -216,9 +216,18 @@ a {
 	grid-column: 12/12;
 }
 
-.puzzle-board { 
-	border-radius: 50px;
+
+.solarSystem-image {
+	cursor: pointer;
+}
+
+.solar-board {
+	
+	margin-top: 60px;
+	width: 1016px;
+	height: 150px;
 	margin: 0 auto;
+
 	width: 958px;
 	height: 194px; 
 	background-repeat: no-repeat;
@@ -228,4 +237,25 @@ a {
 	background-color: #000;
 }  
 
+
+
+	display: flex;
+	flex-wrap: wrap;
+	background-color: black;
+	
+}
+
+.drop-zone {
+	
+	border: thin dashed white;
+	width: 200px;	
+	border-color: #f1c761;
+	/* margin: 10px; */
+}
+
+.drop-zone img {
+	position: absolute;
+	width: 100%;
+
+}
 
