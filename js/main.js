@@ -1,8 +1,9 @@
 let puzzleBoard = document.querySelector(".solar-board"),
 	puzzlePieces = document.querySelectorAll(".solarSystem img"),
 	dropZones = document.querySelectorAll(".drop-zone"),
-	mainBoard = document.querySelector(".solarSystem"),
+	mainBoard = document.querySelector('.solarSystem'),
     draggedPiece = null;
+
 
 
 function handleStartDrag() {
@@ -24,6 +25,7 @@ function handleDrop(e) {
 	
 	console.log('dropped something on me');
 }
+
 puzzlePieces.forEach(piece => piece.addEventListener('dragstart', handleStartDrag));
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));

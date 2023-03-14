@@ -233,16 +233,69 @@ a {
 	
 }
 
-.drop-zone {
+/* .drop-zone {
 	
 	border: thin dashed white;
 	width: 200px;	
 	border-color: #f1c761;
-	/* margin: 10px; */
+	/* margin: 10px;  
+} */
+
+.drop-zone img {
+	float: none;
+	padding: 0;
+	position: absolute;
+	width: 20%;
+} 
+
+.solarSystem {
+	width: 300px;
+	margin-right: 20px;
+
+}
+
+
+
+/* .solarSystem-image:nth-child(even) {
+	float: right;
+	clear: both;
+}
+.solarSystem-image:nth-child(odd) {
+	float: left;
+	clear: both;
+} */
+
+/* .solar-board {
+	margin-top: 40px;
+	height: 400px;
+	display: inline-block;
+	border: medium solid #333;
+	background-color: #000;
+	color: inherit;
+	overflow: hidden;
+} */
+
+.drop-zone {
+	width: 49.5%;
+  height: 49.5%;
+  border: thin dashed white;
+  float: left;
+	position: relative;
 }
 
 .drop-zone img {
+	float: none;
+	padding: 0;
 	position: absolute;
-	width: 100%;
-
+	width: 50%;
 }
+
+.tl img {
+	left: 0;
+	bottom: 0;
+}
+.tr img { 
+	bottom: 0;}
+.bl img { 
+	right: 0; }
+
