@@ -227,6 +227,18 @@ a {
 	width: 1016px;
 	height: 150px;
 	margin: 0 auto;
+
+	width: 958px;
+	height: 194px; 
+	background-repeat: no-repeat;
+	border-width: 5px;
+	border-style: solid;
+	border-color: white;
+	background-color: #000;
+}  
+
+
+
 	display: flex;
 	flex-wrap: wrap;
 	background-color: black;
@@ -294,8 +306,10 @@ a {
 	left: 0;
 	bottom: 0;
 }
+
 .tr img { 
 	bottom: 0;}
 .bl img { 
 	right: 0; }
+
 
