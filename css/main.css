@@ -149,16 +149,20 @@ a {
 }
 
 #hero {
+	padding-top: 200px;
     height: 953px;
     background-image: url(../images/galaxyBG.jpg);
 }
 
-/* solarsystem */
+#solarSystem {
+	transform: rotate(15deg);
+    transform-origin: center;
+}
 
 #sun {
 	grid-column: 2/4;
 	/* margin-top: 270px; */
-	margin-left: 35px;
+	/* margin-left: 35px; */
 }
 
 #mercury {
@@ -167,45 +171,45 @@ a {
 }
 
 #venus {
-	margin-top: 450px;
-	margin-left: 15px;
+	/* margin-top: 450px; */
+	/* margin-left: 15px; */
 	grid-column: 5/5;
 }
 
 #earth {
-	margin-top: 300px;
+	/* margin-top: 300px; */
 	grid-column: 6/6;
 }
 
 #mars {
-	margin-top: 530px;
+	/* margin-top: 530px; */
 	grid-column: 7/7;
 }
 
 #jupiter {
-	margin-left: -50px;
-	margin-top: 100px;
+	/* margin-left: -50px; */
+	/* margin-top: 100px; */
 	grid-column: 8/8;
 }
 
 #saturn {
-	margin-left: -80px;
-	margin-top: 300px;
+	/* margin-left: -80px; */
+	/* margin-top: 300px; */
 	grid-column: 9/9;
 }
 
 #uranus {
-	margin-top: 490px;
+	/* margin-top: 490px; */
 	grid-column: 10/10;
 }
 
 #neptune {
-	margin-top: 300px;
+	/* margin-top: 300px; */
 	grid-column: 11/11;
 }
 
 #pluto {
-	margin-top: 600px;
+	/* margin-top: 600px; */
 	grid-column: 12/12;
 }
 
@@ -215,7 +219,6 @@ a {
 }
 
 .solar-board {
-	
 	width: 1016px;
 	height: 200px;
 	margin: 0 auto;
@@ -225,14 +228,14 @@ a {
 	
 }
 
-.solarSystem-image:nth-child(even) {
+/* .solarSystem-image:nth-child(even) {
 	float: right;
 	clear: both;
 }
 .solarSystem-image:nth-child(odd) {
 	float: left;
 	clear: both;
-}
+} */
 
 .drop-zone {
 	width:200px;
@@ -243,16 +246,12 @@ a {
 }
 
 .drop-zone img {
-	float: none;
+	vertical-align: middle;
 	padding: 0;
 	position: absolute;
-	width: 80%;
-	margin-top: 0;
+	width: 100%;
+	margin: 0 auto;
 }
-
-/* .tl img { right: 0; bottom: 0;}
-.tr img { bottom: 0;}
-.bl img { right: 0; } */
 
 .list-container ul li {
 	
