@@ -155,8 +155,9 @@ a {
 }
 
 #solarSystem {
-	transform: rotate(15deg);
-    transform-origin: center;
+	/* transform: rotate(15deg);
+    transform-origin: center; */
+	grid-row: 2/3;
 }
 
 #sun {
@@ -219,7 +220,8 @@ a {
 }
 
 .solar-board {
-	width: 1016px;
+	grid-row: 1/3;
+	width: 1020px;
 	height: 200px;
 	margin: 0 auto;
 	display: flex;
@@ -270,3 +272,13 @@ a {
 	margin-left: 50px;
 	margin-top: 50px;
   }
+
+.drop-zone button {
+	margin-left: 20px;
+	
+	margin-top: 150px;
+	align-items: center;
+	background-color: yellow;
+	height: 30px;
+	width: 30px;
+}
