@@ -1,4 +1,3 @@
-/* Hi, good day. My name is Kwency Maye Dahilan, currently an IDP3 Level 1 student and this is my FIP.  I dedicate this project to my family, friends, loved ones, and props to all my professors who helped me gain insights and pushing me to do better. I aspire to be a UI/UX Designer or Web Designer in the future and I really hope to reach that success. I have a strong confidence that with Fanshawe's quality of education and with the teacher's encouragement and high-level skills, my ONE DAY will become DAY ONE soon. :) I try to be as organized as possible in my css so enjoy!*/
 
 /* Table of Contents
 
@@ -154,11 +153,13 @@ a {
     background-image: url(../images/galaxyBG.jpg);
 }
 
+
 #solarSystem {
 	/* transform: rotate(15deg);
     transform-origin: center; */
 	grid-row: 2/3;
 }
+
 
 #sun {
 	grid-column: 2/4;
