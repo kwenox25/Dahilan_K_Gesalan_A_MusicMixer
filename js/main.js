@@ -1,44 +1,50 @@
-const solarSystemImages = document.querySelectorAll('.solarSystem-image');
-const dropZones = document.querySelectorAll('.drop-zone');
+let 
+	puzzleBoard = document.querySelector(".solar-board"),
+	puzzlePieces = document.querySelectorAll("#solarSystem img"),
+	dropZones = document.querySelectorAll(".drop-zone"),
+	mainBoard = document.querySelector("#solarSystem"),
+    draggedPiece = null;
 
-// Add event listeners for drag and drop
-solarSystemImages.forEach(image => {
-  image.addEventListener('dragstart', dragStart);
-  image.addEventListener('dragend', dragEnd);
-});
 
-dropZones.forEach(zone => {
-  zone.addEventListener('dragover', dragOver);
-  zone.addEventListener('dragenter', dragEnter);
-  zone.addEventListener('dragleave', dragLeave);
-  zone.addEventListener('drop', drop);
-});
+function changeBGImage() {
+		// Remove all dragged pieces from drop zones
+		// Fix Bug 2
+	dropZones.forEach(zone => {
+        while (zone.firstChild) {
+            zone.removeChild(zone.firstChild);
+        }
+    });
 
-// Drag functions
-function dragStart() {
-  this.classList.add('dragging');
+    puzzlePieces.forEach(piece => {
+        piece.classList.remove("dropped");
+        mainBoard.appendChild(piece);
+    });
+
+	puzzleBoard.style.backgroundImage = `url('images/backGround${this.id}.jpg')`;
 }
 
-function dragEnd() {
-  this.classList.remove('dragging');
+function handleStartDrag() {
+	console.log('Started dragging this piece:', this);
+	draggedPiece = this;
 }
 
-// Drop zone functions
-function dragOver(e) {
-  e.preventDefault();
+function handleDragOver(event) {
+	event.preventDefault();
+	// Fix Bug 2
+	if (this.children.length === 0) {
+		this.appendChild(draggedPiece);
+		console.log('dragged over me');
+	}
 }
 
-function dragEnter(e) {
-  e.preventDefault();
-  this.classList.add('hovered');
+function handleDrop(e) {
+	e.preventDefault();
+	
+	console.log('dropped something on me');
 }
 
-function dragLeave() {
-  this.classList.remove('hovered');
-}
 
-function drop() {
-  this.classList.remove('hovered');
-  const draggedImage = document.querySelector('.dragging');
-  this.appendChild(draggedImage);
-}
+puzzlePieces.forEach(piece => piece.addEventListener('dragstart', handleStartDrag));
+dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
+dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
