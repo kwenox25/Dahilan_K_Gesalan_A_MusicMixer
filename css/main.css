@@ -1,4 +1,3 @@
-/* Hi, good day. My name is Kwency Maye Dahilan, currently an IDP3 Level 1 student and this is my FIP.  I dedicate this project to my family, friends, loved ones, and props to all my professors who helped me gain insights and pushing me to do better. I aspire to be a UI/UX Designer or Web Designer in the future and I really hope to reach that success. I have a strong confidence that with Fanshawe's quality of education and with the teacher's encouragement and high-level skills, my ONE DAY will become DAY ONE soon. :) I try to be as organized as possible in my css so enjoy!*/
 
 /* Table of Contents
 
@@ -26,13 +25,6 @@
 /* CSS Document */
 
 
-@font-face {
-	font-family: "Yellowtail";
-	src: url(../fonts/Yellowtail/Yellowtail-Regular.ttf);
-	src: url(../fonts/Yellowtail/Yellowtail-Regular.ttf) format("woff"),
-	url(../fonts/Yellowtail/Yellowtail-Regular.ttf) format("opentype"),
-	url(../fonts/Yellowtail/Yellowtail-Regular.ttf) format("svg");
-	}
 
 .box-color {
 	color: #fff;
@@ -164,12 +156,12 @@ a {
 
 #sun {
 	grid-column: 2/4;
-	margin-top: 270px;
+	/* margin-top: 270px; */
 	margin-left: 35px;
 }
 
 #mercury {
-	margin-top: 200px;
+	/* margin-top: 200px; */
 	grid-column: 4/4;
 }
 
@@ -223,74 +215,28 @@ a {
 
 .solar-board {
 	
-	margin-top: 60px;
 	width: 1016px;
-	height: 150px;
+	height: 200px;
 	margin: 0 auto;
-
-	width: 958px;
-	height: 194px; 
-	background-repeat: no-repeat;
-	border-width: 5px;
-	border-style: solid;
-	border-color: white;
-	background-color: #000;
-}  
-
-
-
 	display: flex;
 	flex-wrap: wrap;
 	background-color: black;
 	
 }
 
-/* .drop-zone {
-	
-	border: thin dashed white;
-	width: 200px;	
-	border-color: #f1c761;
-	/* margin: 10px;  
-} */
-
-.drop-zone img {
-	float: none;
-	padding: 0;
-	position: absolute;
-	width: 20%;
-} 
-
-.solarSystem {
-	width: 300px;
-	margin-right: 20px;
-
-}
-
-
-
-/* .solarSystem-image:nth-child(even) {
+.solarSystem-image:nth-child(even) {
 	float: right;
 	clear: both;
 }
 .solarSystem-image:nth-child(odd) {
 	float: left;
 	clear: both;
-} */
-
-/* .solar-board {
-	margin-top: 40px;
-	height: 400px;
-	display: inline-block;
-	border: medium solid #333;
-	background-color: #000;
-	color: inherit;
-	overflow: hidden;
-} */
+}
 
 .drop-zone {
-	width: 49.5%;
-  height: 49.5%;
-  border: thin dashed white;
+	width:200px;
+  height: 200px;
+  border: 2px solid yellow;
   float: left;
 	position: relative;
 }
@@ -299,17 +245,28 @@ a {
 	float: none;
 	padding: 0;
 	position: absolute;
-	width: 50%;
+	width: 80%;
+	margin-top: 0;
 }
 
-.tl img {
-	left: 0;
-	bottom: 0;
+/* .tl img { right: 0; bottom: 0;}
+.tr img { bottom: 0;}
+.bl img { right: 0; } */
+
+.list-container ul li {
+	
+		transform: rotate(-45deg);
+		margin-left: 20px;
+		margin-bottom: 30px;
+		list-style: none;
+	  
+	
+	  /* rotate the container to correct the angle */
+	  
 }
 
-.tr img { 
-	bottom: 0;}
-.bl img { 
-	right: 0; }
-
-
+.list-container {
+	transform: rotate(90deg);
+	margin-left: 50px;
+	margin-top: 50px;
+  }
