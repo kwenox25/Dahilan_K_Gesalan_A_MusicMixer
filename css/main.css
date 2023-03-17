@@ -1,24 +1,4 @@
 
-/* Table of Contents
-
-  	1. General Styles
-    2. Grid
-    3. Header
-	4. Main Navigation
-	5. Hero
-	6. Modal for Gift Certificate
-	7. Menu/Products
-	8. Services
-	9. Map Address
-	10. Contact Form - Email Form 
-	11a. Footer - Social Media
-	11b. Footer - Opening Hours
-	11c. Footer - About Us
-	11d. Footer - Contact Us
-	11e. Footer - Newsletter
-	
-*/
-
 /*  --- 1. General Styles ---- */
 
 @charset "UTF-8";
@@ -53,8 +33,8 @@ img {
 /*html selectors*/
 
 body {
-	font-family: 'Oswald';
 	font-size: 24px;
+	/* background-image: url(../images/galaxyBG3.jpg); */
 
 }
 
@@ -147,64 +127,74 @@ a {
     color:  #f1c761;
 }
 
+
 #hero {
-    height: 953px;
-    background-image: url(../images/galaxyBG.jpg);
+	margin-top: -100px;
+	height: 1016px;
+	background-image: url(../images/galaxyBG3.jpg);
 }
 
-/* solarSystem */
+#solarSystem {
+	padding-top: 340px;
+	/* transform: rotate(15deg);
+    transform-origin: center; */
+	grid-row: 2/3;
+}
+
 
 #sun {
-	grid-column: 2/4;
+	grid-column: 1/2;
+	
 	/* margin-top: 270px; */
-	margin-left: 35px;
+	/* margin-left: 35px; */
 }
 
 #mercury {
 	/* margin-top: 200px; */
-	grid-column: 4/4;
+	grid-column: 3/4;
 }
 
 #venus {
-	margin-top: 450px;
-	margin-left: 15px;
-	grid-column: 5/5;
+	/* margin-top: 450px; */
+	/* margin-left: 15px; */
+	grid-column: 4/4;
 }
 
 #earth {
-	margin-top: 300px;
-	grid-column: 6/6;
+	/* margin-top: 300px; */
+	grid-column: 5/5;
 }
 
 #mars {
-	margin-top: 530px;
-	grid-column: 7/7;
+	/* margin-top: 530px; */
+	grid-column: 6/6;
 }
 
 #jupiter {
-	margin-left: -50px;
-	margin-top: 100px;
-	grid-column: 8/8;
+	/* margin-left: -50px; */
+	/* margin-top: 100px; */
+	grid-column: 7/8;
 }
 
 #saturn {
-	margin-left: -80px;
-	margin-top: 300px;
-	grid-column: 9/9;
+	/* margin-left: -80px; */
+	/* margin-top: 300px; */
+	grid-column: 8/9;
+	transform: rotate(45deg);
 }
 
 #uranus {
-	margin-top: 490px;
+	/* margin-top: 490px; */
 	grid-column: 10/10;
 }
 
 #neptune {
-	margin-top: 300px;
+	/* margin-top: 300px; */
 	grid-column: 11/11;
 }
 
 #pluto {
-	margin-top: 600px;
+	/* margin-top: 600px; */
 	grid-column: 12/12;
 }
 
@@ -215,7 +205,7 @@ a {
 
 .solar-board {
 	
-	width: 1016px;
+	width: 1020px;
 	height: 200px;
 	margin: 0 auto;
 	display: flex;
@@ -224,14 +214,14 @@ a {
 	
 }
 
-.solarSystem-image:nth-child(even) {
+/* .solarSystem-image:nth-child(even) {
 	float: right;
 	clear: both;
 }
 .solarSystem-image:nth-child(odd) {
 	float: left;
 	clear: both;
-}
+} */
 
 .drop-zone {
 	width:200px;
@@ -242,16 +232,12 @@ a {
 }
 
 .drop-zone img {
-	float: none;
+	vertical-align: middle;
 	padding: 0;
 	position: absolute;
-	width: 80%;
-	margin-top: 0;
+	width: 100%;
+	margin: 0 auto;
 }
-
-/* .tl img { right: 0; bottom: 0;}
-.tr img { bottom: 0;}
-.bl img { right: 0; } */
 
 .list-container ul li {
 	
@@ -270,3 +256,13 @@ a {
 	margin-left: 50px;
 	margin-top: 50px;
   }
+
+.drop-zone button {
+	margin-left: 20px;
+	
+	margin-top: 150px;
+	align-items: center;
+	background-color: yellow;
+	height: 30px;
+	width: 30px;
+}
