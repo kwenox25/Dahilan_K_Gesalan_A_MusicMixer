@@ -131,7 +131,7 @@ a {
 #hero {
 	margin-top: -100px;
 	height: 1016px;
-	background-image: url(../images/galaxyBG3.jpg);
+	background-image: url(../images/galaxyBG.jpg);
 }
 
 #solarSystem {
@@ -143,58 +143,66 @@ a {
 
 
 #sun {
-	grid-column: 1/2;
-	
-	/* margin-top: 270px; */
-	/* margin-left: 35px; */
+	grid-column: 2/4;
+	margin-top: -30px; 
+	margin-left: 35px;
 }
 
 #mercury {
+	margin-top: -120px;
 	/* margin-top: 200px; */
-	grid-column: 3/4;
+	grid-column: 4/4;
 }
 
 #venus {
-	/* margin-top: 450px; */
-	/* margin-left: 15px; */
-	grid-column: 4/4;
+	margin-top: 110px;
+
+	grid-column: 5/5;
 }
 
 #earth {
 	/* margin-top: 300px; */
-	grid-column: 5/5;
-}
-
-#mars {
-	/* margin-top: 530px; */
 	grid-column: 6/6;
 }
 
+#mars {
+	margin-top: 150px;
+	/* margin-top: 530px; */
+	grid-column: 7/7;
+}
+
 #jupiter {
-	/* margin-left: -50px; */
+	margin-top: -382px;
+	margin-left: 100px;
 	/* margin-top: 100px; */
 	grid-column: 7/8;
 }
 
 #saturn {
-	/* margin-left: -80px; */
-	/* margin-top: 300px; */
-	grid-column: 8/9;
-	transform: rotate(45deg);
-}
-
-#uranus {
-	/* margin-top: 490px; */
-	grid-column: 10/10;
+	
+	margin-top: -200px;
+	grid-column: 8/10;
+	margin-left: 70px;
+	
 }
 
 #neptune {
 	/* margin-top: 300px; */
+	grid-column: 10/10;
+	margin-top: -112px;
+	
+}
+
+
+#uranus {
+	margin-top: -382px;
 	grid-column: 11/11;
 }
 
+
 #pluto {
 	/* margin-top: 600px; */
+	margin-top: -150px;
 	grid-column: 12/12;
 }
 
@@ -204,7 +212,7 @@ a {
 }
 
 .solar-board {
-	
+	margin-top: 50px;
 	width: 1500px;
 	height: 200px;
 	margin-left: 294px;
@@ -242,7 +250,8 @@ a {
 	padding: 0;
 	position: absolute;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto !important;
+	margin-top: 0 !important;
 }
 
 .list-container ul li {
