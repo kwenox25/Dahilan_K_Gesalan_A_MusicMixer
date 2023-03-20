@@ -205,12 +205,12 @@ a {
 
 .solar-board {
 	
-	width: 1020px;
+	width: 1200px;
 	height: 200px;
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: black;
+	/* background-color: black; */
 	
 }
 
@@ -226,8 +226,10 @@ a {
 .drop-zone {
 	width:200px;
   height: 200px;
+  margin-right: 20px;
   border: 2px solid yellow;
   float: left;
+  border-radius: 10px;
 	position: relative;
 }
 
