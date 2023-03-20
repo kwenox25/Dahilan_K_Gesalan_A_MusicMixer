@@ -284,7 +284,7 @@ a {
  }
 
 .muteIcon, .playIcon, .closeIcon {
-	background-color: cyan;
+	background-color: white;
 	height: 30px;
 	margin-top: 20px;
 	width: 62px;
