@@ -222,6 +222,11 @@ a {
 	
 }
 
+.control-Panel {
+	margin: 0 auto;
+	display: grid;
+	grid-column: 4/9;
+}
 /* .solarSystem-image:nth-child(even) {
 	float: right;
 	clear: both;
@@ -247,9 +252,10 @@ a {
 
 .drop-zone img {
 	vertical-align: middle;
-	padding: 0;
+	padding-left: 25px;
+	padding-top: 25px;
 	position: absolute;
-	width: 100%;
+	width: 80%;
 	margin: 0 auto !important;
 	margin-top: 0 !important;
 }
@@ -300,5 +306,5 @@ a {
 	border-radius: 20px;
 	box-shadow: rgb(106, 109, 113) 0px 20px 30px -10px, 
   rgb(162, 205, 242) 2px 2px 6px 0px inset;
-  margin-left: 12px;
+  	margin-left: 12px;
 }
