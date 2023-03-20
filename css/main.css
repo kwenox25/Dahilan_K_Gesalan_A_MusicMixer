@@ -227,9 +227,13 @@ a {
 	width:200px;
   height: 200px;
   margin-right: 20px;
-  border: 2px solid yellow;
+  border: 1px solid #4842b3;
+  background-color: cyan;
   float: left;
   border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px, 
+  rgb(162, 205, 242) 6px 6px 6px 0px inset;
+  /* rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 	position: relative;
 }
 
@@ -267,4 +271,24 @@ a {
 	background-color: yellow;
 	height: 30px;
 	width: 30px;
+}
+
+.sound_controls {
+	width: 100%;
+	
+	
+ }
+
+.drop-zone .muteIcon {
+	width: 20%;
+ }
+
+.muteIcon, .playIcon, .closeIcon {
+	background-color: cyan;
+	height: 30px;
+	margin-top: 20px;
+	width: 62px;
+	border-radius: 20px;
+	box-shadow: rgb(106, 109, 113) 0px 20px 30px -10px, 
+  rgb(162, 205, 242) 2px 2px 6px 0px inset;
 }
