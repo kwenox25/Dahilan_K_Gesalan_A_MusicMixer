@@ -205,9 +205,9 @@ a {
 
 .solar-board {
 	
-	width: 1200px;
+	width: 1500px;
 	height: 200px;
-	margin: 0 auto;
+	margin-left: 294px;
 	display: flex;
 	flex-wrap: wrap;
 	/* background-color: black; */
@@ -224,16 +224,16 @@ a {
 } */
 
 .drop-zone {
-	width:200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin-right: 20px;
   border: 1px solid #4842b3;
-  background-color: cyan;
+  background-color: rgb(133, 107, 41);
   float: left;
-  border-radius: 10px;
+  border-radius: 50px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px, 
   rgb(162, 205, 242) 6px 6px 6px 0px inset;
-  /* rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+  /* rgba(255, 255, 255, 0.5) -3px -3px 6 x 1px inset; */
 	position: relative;
 }
 
@@ -268,7 +268,7 @@ a {
 	
 	margin-top: 150px;
 	align-items: center;
-	background-color: yellow;
+	
 	height: 30px;
 	width: 30px;
 }
@@ -284,11 +284,12 @@ a {
  }
 
 .muteIcon, .playIcon, .closeIcon {
-	background-color: white;
-	height: 30px;
+	background-color: gold;
+	height: 45px;
 	margin-top: 20px;
 	width: 62px;
 	border-radius: 20px;
 	box-shadow: rgb(106, 109, 113) 0px 20px 30px -10px, 
   rgb(162, 205, 242) 2px 2px 6px 0px inset;
+  margin-left: 12px;
 }
