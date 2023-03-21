@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="177.45" height="67.85" viewBox="0 0 177.45 67.85">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: BebasNeue-Regular, 'Bebas Neue';
+        font-size: 17px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #335567;
+      }
+
+      .cls-3 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        fill: #6acce1;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="pause">
+    <path class="cls-4" d="m123.95,67.85c-22.96-.07-45.93-.14-68.89-.21L0,0h177.45c-17.83,22.62-35.66,45.23-53.5,67.85Z"/>
+    <text class="cls-1" transform="translate(72.68 62.22)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan class="cls-5" x="5.97" y="0">A</tspan><tspan x="12.75" y="0">USE</tspan></text>
+    <rect class="cls-2" x="80.57" y="12.32" width="5.49" height="31.38" rx="1.47" ry="1.47"/>
+    <rect class="cls-2" x="90.28" y="12.32" width="5.49" height="31.38" rx="1.47" ry="1.47"/>
+  </g>
+</svg>

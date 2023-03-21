@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="177.45" height="67.85" viewBox="0 0 177.45 67.85">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: BebasNeue-Regular, 'Bebas Neue';
+        font-size: 17px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #335567;
+      }
+
+      .cls-3 {
+        fill: #6acce1;
+      }
+    </style>
+  </defs>
+  <g id="rewind">
+    <path class="cls-3" d="m123.95,0c-22.96.07-45.93.14-68.89.21L0,67.85h177.45C159.61,45.23,141.78,22.62,123.95,0Z"/>
+    <path class="cls-2" d="m86.12,14.29v27.01c0,1.78-2.01,2.81-3.45,1.78l-19.63-14.02c-1.25-.89-1.21-2.75.06-3.6l19.63-12.99c1.45-.96,3.39.08,3.39,1.82Z"/>
+    <path class="cls-2" d="m111.77,14.29v27.01c0,1.78-2.01,2.81-3.45,1.78l-19.63-14.02c-1.25-.89-1.21-2.75.06-3.6l19.63-12.99c1.45-.96,3.39.08,3.39,1.82Z"/>
+    <text class="cls-1" transform="translate(68.63 62.01)"><tspan x="0" y="0">REWIND</tspan></text>
+  </g>
+</svg>
