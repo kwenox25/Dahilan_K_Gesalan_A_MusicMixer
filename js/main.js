@@ -1,27 +1,14 @@
-let 
-	puzzleBoard = document.querySelector(".solar-board"),
+let puzzleBoard = document.querySelector(".solar-board"),
 	puzzlePieces = document.querySelectorAll("#solarSystem img"),
 	dropZones = document.querySelectorAll(".drop-zone"),
 	mainBoard = document.querySelector("#solarSystem"),
-    draggedPiece = null;
+	planetAudio = document.querySelectorAll(".drop-zone img"),
+	audioEl = document.querySelector("audio"),
+	playButton = document.querySelector("#masterPlay"),
+    pauseButton = document.querySelector("#masterPause"),
+    rewindButton = document.querySelector("#masterRewind"),
+	draggedPiece = null;
 
-
-function changeBGImage() {
-		// Remove all dragged pieces from drop zones
-		// Fix Bug 2
-	dropZones.forEach(zone => {
-        while (zone.firstChild) {
-            zone.removeChild(zone.firstChild);
-        }
-    });
-
-    puzzlePieces.forEach(piece => {
-        piece.classList.remove("dropped");
-        mainBoard.appendChild(piece);
-    });
-
-	puzzleBoard.style.backgroundImage = `url('images/backGround${this.id}.jpg')`;
-}
 
 function handleStartDrag() {
 	console.log('Started dragging this piece:', this);
@@ -30,7 +17,6 @@ function handleStartDrag() {
 
 function handleDragOver(event) {
 	event.preventDefault();
-	// Fix Bug 2
 	if (this.children.length === 0) {
 		this.appendChild(draggedPiece);
 		console.log('dragged over me');
@@ -43,8 +29,32 @@ function handleDrop(e) {
 	console.log('dropped something on me');
 }
 
+function loadAudio() {
+	// find the right audio track and play it based on the dataset attribute
+	audioEl.src = `audio/${this.dataset.trackref}.mp3`;
+	audioEl.load();
 
-puzzlePieces.forEach(piece => piece.addEventListener('dragstart', handleStartDrag));
+	// now i can play audio without things breaking
+	playTrack();
+	// debugger;
+}
+
+function playTrack() { audioEl.play(); }
+
+function pauseTrack() { audioEl.pause(); }
+
+function rewindTrack() { audioEl.currentTime = 0; }
+
+
+puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
+
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
+
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
+planetAudio.forEach(song => song.addEventListener("click", loadAudio));
+
+playButton.addEventListener("click", playTrack);
+pauseButton.addEventListener("click", pauseTrack);
+rewindButton.addEventListener("click", rewindTrack);
 
