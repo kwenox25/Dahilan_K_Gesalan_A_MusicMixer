@@ -14,7 +14,7 @@ let puzzleBoard = document.querySelector(".solar-board"),
 function handleStartDrag() {
 	console.log('Started dragging this piece:', this);
 	draggedPiece = this;
-}
+} 
 
 function handleDragOver(event) {
 	event.preventDefault();
