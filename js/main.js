@@ -5,7 +5,7 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	draggedPiece = null,
 	reset = document.querySelector("#reset"),
 
-// const
+const
 	planetAudio = document.querySelectorAll(".drop-zone img"),
 	audioEl = document.querySelector("audio"),
 	playButton = document.querySelector("#masterPlay"),
