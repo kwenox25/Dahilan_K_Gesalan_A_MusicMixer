@@ -4,9 +4,7 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	mainBoard = document.querySelector("#solarSystem"),
 	draggedPiece = null,
 	reset = document.querySelector("#reset"),
-
-// const
-	planetAudio = document.querySelectorAll(".drop-zone img"),
+	planetAudio = document.querySelectorAll("#solarSystem img"),
 	audioEl = document.querySelector("audio"),
 	playButton = document.querySelector("#masterPlay"),
     pauseButton = document.querySelector("#masterPause"),
@@ -48,6 +46,10 @@ function pauseTrack() { audioEl.pause(); }
 
 function rewindTrack() { audioEl.currentTime = 0; }
 
+function resetGame() {
+	document.location.reload();
+}
+
 
 puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
 
@@ -55,11 +57,8 @@ dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 
-planetAudio.forEach(song => song.addEventListener("click", loadAudio));
+planetAudio.forEach(song => song.addEventListener("drop", loadAudio));
 
-function resetGame() {
-	document.location.reload();
-}
 
 playButton.addEventListener("click", playTrack);
 pauseButton.addEventListener("click", pauseTrack);
