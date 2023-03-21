@@ -3,9 +3,10 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	dropZones = document.querySelectorAll(".drop-zone"),
 	mainBoard = document.querySelector("#solarSystem"),
 	draggedPiece = null,
-	reset = document.querySelector("#reset");;
-const
-	planetAudio = document.querySelectorAll(".droppedAudio img"),
+	reset = document.querySelector("#reset"),
+
+// const
+	planetAudio = document.querySelectorAll(".drop-zone img"),
 	audioEl = document.querySelector("audio"),
 	playButton = document.querySelector("#masterPlay"),
     pauseButton = document.querySelector("#masterPause"),
@@ -15,7 +16,7 @@ const
 function handleStartDrag() {
 	console.log('Started dragging this piece:', this);
 	draggedPiece = this;
-}
+} 
 
 function handleDragOver(event) {
 	event.preventDefault();
