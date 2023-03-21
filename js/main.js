@@ -2,13 +2,15 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	puzzlePieces = document.querySelectorAll("#solarSystem img"),
 	dropZones = document.querySelectorAll(".drop-zone"),
 	mainBoard = document.querySelector("#solarSystem"),
-	planetAudio = document.querySelectorAll(".drop-zone img"),
+	draggedPiece = null,
+	reset = document.querySelector("#reset");;
+const
+	planetAudio = document.querySelectorAll(".droppedAudio img"),
 	audioEl = document.querySelector("audio"),
 	playButton = document.querySelector("#masterPlay"),
     pauseButton = document.querySelector("#masterPause"),
-    rewindButton = document.querySelector("#masterRewind"),
-	draggedPiece = null;
-
+    rewindButton = document.querySelector("#masterRewind");
+	
 
 function handleStartDrag() {
 	console.log('Started dragging this piece:', this);
@@ -24,9 +26,9 @@ function handleDragOver(event) {
 }
 
 function handleDrop(e) {
-	e.preventDefault();
-	
+	e.preventDefault();	
 	console.log('dropped something on me');
+	
 }
 
 function loadAudio() {
@@ -54,7 +56,12 @@ dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 
 planetAudio.forEach(song => song.addEventListener("click", loadAudio));
 
+function resetGame() {
+	document.location.reload();
+}
+
 playButton.addEventListener("click", playTrack);
 pauseButton.addEventListener("click", pauseTrack);
 rewindButton.addEventListener("click", rewindTrack);
+reset.addEventListener("click", resetGame);
 

@@ -187,7 +187,11 @@ a {
 	grid-column: 6/7;
 }
 
-#masterPlay, #masterRewind, #masterPause {
+#reset {
+	margin-left: 30px;
+	grid-column: 9/10;
+}
+#masterPlay, #masterRewind, #masterPause, #reset {
 	margin-top: 170px;
 	cursor: pointer;
 }
