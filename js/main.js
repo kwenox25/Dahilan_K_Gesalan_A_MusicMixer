@@ -8,7 +8,10 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	audioEl = document.querySelector("audio"),
 	playButton = document.querySelector("#masterPlay"),
     pauseButton = document.querySelector("#masterPause"),
-    rewindButton = document.querySelector("#masterRewind");
+    rewindButton = document.querySelector("#masterRewind"),
+	muteButton = document.querySelectorAll(".muteIcon"),
+	playIcon = document.querySelectorAll(".playIcon"),
+	closeIcon = document.querySelectorAll(".closeIcon");
 	
 
 function handleStartDrag() {
@@ -33,6 +36,7 @@ function handleDrop(e) {
 function loadAudio() {
 	// find the right audio track and play it based on the dataset attribute
 	audioEl.src = `audio/${this.dataset.trackref}.mp3`;
+	console.log('now playing', this);
 	audioEl.load();
 
 	// now i can play audio without things breaking
@@ -46,22 +50,38 @@ function pauseTrack() { audioEl.pause(); }
 
 function rewindTrack() { audioEl.currentTime = 0; }
 
+function muteTrack() {
+	if 	(audioEl.muted) {
+		audioEl.muted = false;
+		this.src = "images/mute.svg";
+	} else { audioEl.muted = true;
+	this.src = "images/muted.svg";
+}
+}
+
 function resetGame() {
 	document.location.reload();
 }
 
+function returnPlanet() {
+	// debugger;
+	dropZones.forEach(zone => {
+        while (zone.firstChild) {
+            zone.removeChild(zone.firstChild);
+        }
+    });
+
+}
 
 puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
-
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
-
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
-
 planetAudio.forEach(song => song.addEventListener("drop", loadAudio));
-
-
 playButton.addEventListener("click", playTrack);
 pauseButton.addEventListener("click", pauseTrack);
 rewindButton.addEventListener("click", rewindTrack);
 reset.addEventListener("click", resetGame);
+muteButton.forEach(mutes => mutes.addEventListener("click", muteTrack));
+closeIcon.forEach(closes => closes.addEventListener("click", returnPlanet));
+
 
