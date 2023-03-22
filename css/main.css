@@ -176,6 +176,11 @@ a {
 	grid-column: 4/5;
 }
 
+#masterPlay:active {
+	box-shadow: 0 0 5px #ffee10;
+  	
+}
+
 #masterPause {
 	margin-left: 30px;
 	grid-column: 5/6;
@@ -365,23 +370,14 @@ a {
 	width: 30px;
 }
 
-.sound_controls {
-	width: 100%;
-	
-	
+.sound_controls img {
+	margin-top: 15px;
+	width: 30%;
+	cursor: pointer;
  }
 
-.drop-zone .muteIcon {
-	width: 20%;
+ .sound_controls {
+	padding-left: 10px;
+	padding-right: 10px;
  }
 
-.muteIcon, .playIcon, .closeIcon {
-	background-color: gold;
-	height: 45px;
-	margin-top: 20px;
-	width: 62px;
-	border-radius: 20px;
-	box-shadow: rgb(106, 109, 113) 0px 20px 30px -10px, 
-  rgb(162, 205, 242) 2px 2px 6px 0px inset;
-  	margin-left: 12px;
-}

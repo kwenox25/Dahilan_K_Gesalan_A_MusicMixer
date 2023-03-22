@@ -33,6 +33,7 @@ function handleDrop(e) {
 function loadAudio() {
 	// find the right audio track and play it based on the dataset attribute
 	audioEl.src = `audio/${this.dataset.trackref}.mp3`;
+	console.log('now playing', this);
 	audioEl.load();
 
 	// now i can play audio without things breaking
