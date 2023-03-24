@@ -13,12 +13,13 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	muteButton = document.querySelectorAll(".muteIcon"),
 	playIcon = document.querySelectorAll(".playIcon"),
 	closeIcon = document.querySelectorAll(".closeIcon");
+
 	
 
 function handleStartDrag() {
 	console.log('Started dragging this piece:', this);
 	draggedPiece = this;
-}
+} 
 
 function handleDragOver(event) {
 	event.preventDefault();
@@ -81,6 +82,11 @@ solarSystemImages.forEach(image => {
 	});
   });
 
+function volume () {
+	volume = this.value / 100;
+	audioElement.volume = volume;
+}
+
 puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
@@ -91,5 +97,3 @@ rewindButton.addEventListener("click", rewindTrack);
 reset.addEventListener("click", resetGame);
 muteButton.forEach(mutes => mutes.addEventListener("click", muteTrack));
 closeIcon.forEach(closes => closes.addEventListener("click", returnPlanet));
-
-
