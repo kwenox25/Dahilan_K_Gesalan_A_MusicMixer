@@ -407,3 +407,12 @@ a {
 	padding-right: 10px;
  }
 
+ 
+ @keyframes rotate {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
