@@ -12,7 +12,6 @@ let puzzleBoard = document.querySelector(".solar-board"),
     rewindButton = document.querySelector("#masterRewind"),
 	muteButton = document.querySelectorAll(".muteIcon"),
 	playIcon = document.querySelectorAll(".playIcon"),
-	volume = document.querySelector("#volume-slider"),
 	closeIcon = document.querySelectorAll(".closeIcon");
 
 	
@@ -45,6 +44,12 @@ function loadAudio() {
 	// now i can play audio without things breaking
 	playTrack();
 	// debugger;
+
+	// create and play new planet sound
+	let newAudio = document.createElement("audio");
+	newAudio.src = `audio/${this.dataset.trackref}.mp3`;
+	newAudio.load();
+	newAudio.play();
 }
 
 function playTrack() { audioEl.play(); }
@@ -68,11 +73,14 @@ function resetGame() {
 
 function returnPlanet() {
 	// debugger;
-	// dropZones.forEach(zone => {
-    //     while (zone.firstChild) {
-    //         zone.removeChild(zone.firstChild);
-    //     }
-    // });
+	dropZones.forEach(zone => {
+        while (zone.firstChild) {
+            zone.removeChild(zone.firstChild);
+        }
+    });
+
+	audioEl.pause();
+	audioEl.currentTime = 0;
 
 }
 
@@ -83,10 +91,10 @@ solarSystemImages.forEach(image => {
 	});
   });
 
-function volume() {
-	volume = this.value / 100;
-	audioElement.volume = volume;
-}
+// function volume() {
+// 	volume = this.value / 100;
+// 	audioElement.volume = volume;
+// }
 
 puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
@@ -98,3 +106,12 @@ rewindButton.addEventListener("click", rewindTrack);
 reset.addEventListener("click", resetGame);
 muteButton.forEach(mutes => mutes.addEventListener("click", muteTrack));
 closeIcon.forEach(closes => closes.addEventListener("click", returnPlanet));
+
+// const sliders = document.querySelector('#volume-slider');
+// sliders.forEach((item, i) => {
+//    item.addEventListener('input', function() {
+//       let audioVolume = document.getElementById(`audio${i}`);
+//       audioVolume.volume = this.value / 101;
+//    });
+
+// });
