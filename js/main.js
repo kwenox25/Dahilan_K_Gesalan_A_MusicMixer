@@ -5,6 +5,7 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	draggedPiece = null,
 	reset = document.querySelector("#reset"),
 	planetAudio = document.querySelectorAll("#solarSystem img"),
+	solarSystemImages = document.querySelectorAll(".solarSystem-image"),
 	audioEl = document.querySelector("audio"),
 	playButton = document.querySelector("#masterPlay"),
     pauseButton = document.querySelector("#masterPause"),
@@ -65,13 +66,20 @@ function resetGame() {
 
 function returnPlanet() {
 	// debugger;
-	dropZones.forEach(zone => {
-        while (zone.firstChild) {
-            zone.removeChild(zone.firstChild);
-        }
-    });
+	// dropZones.forEach(zone => {
+    //     while (zone.firstChild) {
+    //         zone.removeChild(zone.firstChild);
+    //     }
+    // });
 
 }
+
+solarSystemImages.forEach(image => {
+	image.addEventListener("dragstart", () => {
+	  // Set the rotation style for the image to rotate infinitely
+	  image.style.animation = "rotate 10s linear infinite";
+	});
+  });
 
 puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
