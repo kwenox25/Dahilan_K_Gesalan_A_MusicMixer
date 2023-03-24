@@ -12,6 +12,7 @@ let puzzleBoard = document.querySelector(".solar-board"),
     rewindButton = document.querySelector("#masterRewind"),
 	muteButton = document.querySelectorAll(".muteIcon"),
 	playIcon = document.querySelectorAll(".playIcon"),
+	volume = document.querySelector("#volume-slider"),
 	closeIcon = document.querySelectorAll(".closeIcon");
 
 	
@@ -82,7 +83,7 @@ solarSystemImages.forEach(image => {
 	});
   });
 
-function volume () {
+function volume() {
 	volume = this.value / 100;
 	audioElement.volume = volume;
 }
