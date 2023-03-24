@@ -1,8 +1,9 @@
-let puzzleBoard = document.querySelector(".solar-board"),
-	puzzlePieces = document.querySelectorAll("#solarSystem img"),
+let solarBoard = document.querySelector(".solar-board"),
+	planetPieces = document.querySelectorAll("#solarSystem img"),
 	dropZones = document.querySelectorAll(".drop-zone"),
 	mainBoard = document.querySelector("#solarSystem"),
 	draggedPiece = null,
+	solarSystemImages = document.querySelectorAll(".solarSystem-image"),
 	reset = document.querySelector("#reset"),
 	planetAudio = document.querySelectorAll("#solarSystem img"),
 	audioEl = document.querySelector("audio"),
@@ -13,6 +14,7 @@ let puzzleBoard = document.querySelector(".solar-board"),
 	playIcon = document.querySelectorAll(".playIcon"),
 	closeIcon = document.querySelectorAll(".closeIcon");
 	
+
 
 function handleStartDrag() {
 	console.log('Started dragging this piece:', this);
@@ -30,8 +32,24 @@ function handleDragOver(event) {
 function handleDrop(e) {
 	e.preventDefault();	
 	console.log('dropped something on me');
+
+
+	// let planet = draggedPiece;
+	// let audioTrack = planet.dataset.trackref;
+	// let audioEl = new Audio(`audio/${audioTrack}.mp3`);
+	// audioEl.play();
+
+	// // move the planet to the drop zone
+	// this.appendChild(planet);
 	
 }
+
+solarSystemImages.forEach(image => {
+	image.addEventListener("dragstart", () => {
+	  // Set the rotation style for the image to rotate infinitely
+	  image.style.animation = "rotate 10s linear infinite";
+	});
+  });
 
 function loadAudio() {
 	// find the right audio track and play it based on the dataset attribute
@@ -54,26 +72,25 @@ function muteTrack() {
 	if 	(audioEl.muted) {
 		audioEl.muted = false;
 		this.src = "images/mute.svg";
-	} else { audioEl.muted = true;
-	this.src = "images/muted.svg";
-}
+		console.log('I am unmuted.');
+	} else
+		 { audioEl.muted = true;
+			this.src = "images/muted.svg";
+			console.log('I am on mute.');
+		 }
 }
 
 function resetGame() {
 	document.location.reload();
 }
 
-function returnPlanet() {
-	// debugger;
-	dropZones.forEach(zone => {
-        while (zone.firstChild) {
-            zone.removeChild(zone.firstChild);
-        }
-    });
 
+function returnPlanet() {
+	debugger;
+	
 }
 
-puzzlePieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
+planetPieces.forEach(piece => piece.addEventListener("dragstart", handleStartDrag));
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 planetAudio.forEach(song => song.addEventListener("drop", loadAudio));
