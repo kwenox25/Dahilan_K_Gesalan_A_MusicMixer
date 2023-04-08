@@ -12,7 +12,8 @@ let puzzleBoard = document.querySelector(".solar-board"),
     rewindButton = document.querySelector("#masterRewind"),
 	muteButton = document.querySelectorAll(".muteIcon"),
 	playIcon = document.querySelectorAll(".playIcon"),
-	closeIcon = document.querySelectorAll(".closeIcon");
+	closeIcon = document.querySelectorAll(".closeIcon"),
+	allAudio = [];
 
 	
 
@@ -50,6 +51,7 @@ function loadAudio() {
 	newAudio.src = `audio/${this.dataset.trackref}.mp3`;
 	newAudio.load();
 	newAudio.play();
+	allAudio.push(newAudio);
 }
 
 function playTrack() { audioEl.play(); }
